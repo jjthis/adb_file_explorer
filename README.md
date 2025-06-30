@@ -1,5 +1,5 @@
-![앱 대표 이미지](assert/image.webp)
-![앱 대표 이미지2](assert/image2.png)
+![앱 대표 이미지](./src/assert/image.webp)
+![앱 대표 이미지2](./src/assert/image2.png)
 
 # ADB File Explorer
 
