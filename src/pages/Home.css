@@ -1,0 +1,95 @@
+/* 전체 화면 중앙 정렬 */
+.container {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    
+    overflow-x: hidden;
+}
+
+
+
+.box {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    /* width: 100vw;
+    max-height: 100vh; */
+    aspect-ratio: 4 / 3;
+    padding: 1rem;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+.box2 {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100vw;
+    max-height: 100vh;
+    aspect-ratio: 4 / 3;
+    padding: 1rem;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 제목 */
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 버튼 그룹 */
+.button-group {
+    text-align: center;
+}
+.button-group > button:hover {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+.button-group > button:focus,
+.button-group > button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-group button {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* 결과 영역 */
+.result {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.footer-buttons {
+    margin-top: auto;
+    padding-top: 3vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    /* gap: 1rem; */
+    padding-bottom: 1rem;
+}
+.footer-buttons > button {
+    background: #f3f3f3;
+}
+
+.footer-notvis {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    height: 0;
+}
+.title {
+    padding-bottom: 2vh;
+}

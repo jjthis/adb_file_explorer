@@ -1,0 +1,244 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  background: white;
+  color: black;
+  height: 100vh;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar.open {
+  width: 32vw;
+}
+
+.sidebar.closed {
+  width: 7vw;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 2vh;
+  right: 1.0vw;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar nav {
+  padding: 8vh 2vw 2vh;
+  height: 100vh;
+  overflow-y: auto;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.closed nav {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar nav::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+.sidebar nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.sidebar nav::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.sidebar nav::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.sort-section {
+  margin-bottom: 2.5vh;
+  padding: 2vh 2vw;
+  background: #f8f9fa;
+  border-radius: 1.2vw;
+  border: 1px solid #e9ecef;
+}
+
+.sort-section h3 {
+  margin: 0 0 1.5vh 0;
+  font-size: 16px;
+  color: #495057;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.sort-controls {
+  display: flex;
+  gap: 0.8vw;
+  align-items: center;
+}
+
+.sort-select {
+  flex: 1;
+  padding: 1vh 1.2vw;
+  border: 1px solid #ced4da;
+  border-radius: 0.8vw;
+  background: white;
+  font-size: 14px;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.sort-select:hover {
+  border-color: #adb5bd;
+  background: #f8f9fa;
+}
+
+.sort-select option {
+  background: white;
+  color: #495057;
+}
+
+.order-toggle {
+  width: 4vw;
+  height: 4vw;
+  min-width: 40px;
+  min-height: 40px;
+  border: 1px solid #ced4da;
+  border-radius: 0.8vw;
+  background: white;
+  color: #495057;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.order-toggle:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+  transform: scale(1.05);
+}
+
+.order-toggle:active {
+  transform: scale(0.95);
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 0.8vh;
+}
+
+.sidebar nav ul li button {
+  width: 100%;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 0.8vw;
+  color: black;
+  text-align: left;
+  padding: 1.2vh 1.6vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.sidebar nav ul li button:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+  transform: translateX(0.5vw);
+}
+
+.sidebar nav ul li button:active {
+  transform: translateX(0.5vw) scale(0.98);
+}
+
+.content {
+  flex: 1;
+  padding: 2vh 2vw;
+  transition: margin-left 0.3s ease;
+}
+
+.content-shift {
+  margin-left: 20vw; /* 슬라이드 열렸을 때 */
+}
+
+.search-section {
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+.search-input {
+  flex: 1;
+  width: 100%;
+  max-width: 180px;
+  min-width: 60px;
+  padding: 0.7em 1em;
+  border: 1px solid #ced4da;
+  border-radius: 0.8vw;
+  font-size: 14px;
+  background: #fff;
+  color: #495057;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.search-btn {
+  width: auto;
+  min-width: 50px;
+  max-width: 100px;
+  padding: 0.7em 2vw;
+  border: 1px solid #adb5bd;
+  border-radius: 0.8vw;
+  background: #ffffff;
+  color: #495057;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.search-btn:hover {
+  background: #e2e6ea;
+  border-color: #007bff;
+}
