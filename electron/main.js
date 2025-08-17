@@ -54,9 +54,15 @@ function createWindow() {
             nodeIntegration: false
         },
     });
-
-    win.loadURL('http://localhost:5173');
-
+    let isDev = !app.isPackaged;
+    isDev = false;
+    // win.loadURL('http://localhost:5173');
+    if (isDev) {
+        win.loadURL('http://localhost:5173'); // 개발 서버
+    } else {
+        console.log("[dist] " + path.join(__dirname, '../dist/index.html'));
+        win.loadFile(path.join(__dirname, '../dist/index.html')); // 빌드 파일
+    }
 
     // const template = [
     //     {

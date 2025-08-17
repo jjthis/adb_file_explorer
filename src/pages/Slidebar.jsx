@@ -3,8 +3,8 @@ import './Sliderbar.css';
 
 export default function Sidebar({ children, onSortChange, onSearch, onOpenChange, refreshSignal }) {
     const [open, setOpen] = useState(false);
-    const [sortOption, setSortOption] = useState('name');
-    const [sortOrder, setSortOrder] = useState('asc'); // asc 또는 desc
+    const [sortOption, setSortOption] = useState('date');
+    const [sortOrder, setSortOrder] = useState('desc'); // asc 또는 desc
     const [searchText, setSearchText] = useState('');
 
     useEffect(() => {

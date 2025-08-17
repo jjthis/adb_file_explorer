@@ -132,8 +132,8 @@ export default function Home() {
     const [searchParams, setSearchParams] = useSearchParams();
     const item = searchParams.get('item') || init;
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const [sortOption, setSortOption] = useState('name');
-    const [sortOrder, setSortOrder] = useState('asc');
+    const [sortOption, setSortOption] = useState('date');
+    const [sortOrder, setSortOrder] = useState('desc');
     const [searchInput, setSearchInput] = useState('');
     const [appliedSearch, setAppliedSearch] = useState('');
 
